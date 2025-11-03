@@ -1,7 +1,9 @@
 package lk.jiat.webii.hp;
 
+import lk.jiat.webii.hp.util.HibernateUtil;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
+import org.hibernate.SessionFactory;
 
 import java.io.File;
 
@@ -11,6 +13,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         try {
             Tomcat tomcat = new Tomcat();
             tomcat.setPort(SERVER_PORT);
