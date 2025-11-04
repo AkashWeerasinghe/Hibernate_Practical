@@ -41,4 +41,12 @@ public class Student implements java.io.Serializable {
     public String getEmail() {return email;}
 
     public void setEmail(String email) {this.email = email;}
+
+    public void setAddress(Address address) {this.address = address;}
+
+    public Address getAddress() {return address;}
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
+    }
 }

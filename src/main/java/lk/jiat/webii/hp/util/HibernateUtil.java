@@ -8,7 +8,7 @@ public class HibernateUtil {
     static {
         try {
             sessionFactory = new org.hibernate.cfg.Configuration()
-                    .configure()
+                    .configure("hibernate.cfg.xml")
                     .buildSessionFactory();
         }catch (HibernateException e){
             throw new ExceptionInInitializerError("Session Factory Creation Failed" +e.getMessage());

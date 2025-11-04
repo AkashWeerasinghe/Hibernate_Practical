@@ -8,18 +8,27 @@
 
         <!-- JDBC Driver -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
         <!-- Dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <!-- URL -->
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate?useSSL=false&amp;allowPublicKeyRetrieval</property>
+
+        <!-- URL (fixed allowPublicKeyRetrieval and added serverTimezone) -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/hibernate?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Colombo
+        </property>
+
         <!-- Username -->
         <property name="hibernate.connection.username">root</property>
+
         <!-- Password -->
         <property name="hibernate.connection.password">Akash1234!</property>
+
         <!-- Automatically create or update tables -->
         <property name="hibernate.hbm2ddl.auto">update</property>
+
         <!-- Show SQL in the console -->
         <property name="hibernate.show_sql">true</property>
+
         <!-- Entity Mapping -->
         <mapping class="lk.jiat.webii.hp.entity.Student"/>
         <mapping class="lk.jiat.webii.hp.entity.Address"/>
